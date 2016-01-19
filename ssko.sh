@@ -120,7 +120,7 @@ KEY_FILE_PATH="$CURRENT_SESSION_KEY_DIR/$KEY_FILE_NAME"
 echo "--------------------------------------------------------------------------------"
 echo "--- SSH KEY GENERATION. KEY LENGTH 4096 ----------------------------------------"
 echo "--------------------------------------------------------------------------------"
-ssh-keygen -b 4096 -f $KEY_FILE_PATH -C user_email -o -a 500
+ssh-keygen -b 4096 -f $KEY_FILE_PATH -C $user_email -o -a 500
 
 cd $PER_USER_SSH_CONFIG_DIR
 cat << EOF >> ./config

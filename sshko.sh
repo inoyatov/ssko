@@ -5,7 +5,7 @@ if [ -z "$HOME" ]; then
 fi
 
 PER_USER_SSH_CONFIG_DIR="$HOME/.ssh"
-SESSION_KEYS_DIR="$PER_USER_SSH_CONFIG_DIR/session_keys"
+SESSION_KEYS_DIR="$PER_USER_SSH_CONFIG_DIR/host_keys"
 
 echo "================================================================================"
 echo "=== SSH Key Generation and Configuration ======================================="

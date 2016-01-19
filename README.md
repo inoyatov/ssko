@@ -35,8 +35,8 @@ After configuration you can copy `id_rsa_192.168.0.1.pub` to your server.
 For details how to configure server read this [StackOverflow answer](http://serverfault.com/questions/313465/is-a-central-location-for-authorized-keys-a-good-idea).
 
 ## TODO:
-- [ ] Checking in `HOST` matcher already exist inside `config` file.
-- [ ] Copy public key to buffer using xclip if it is installed before script complite the job.
+- [ ] Before write check `HOST` matcher exist inside `config` file.
+- [x] Copy public key to buffer using xclip, if it is installed before script complite the job.
 
 # License
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).

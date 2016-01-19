@@ -133,3 +133,12 @@ HOST $host
 
 EOF
 
+# if xclip installed copy public key contents to system clipboard
+! command -v $1 >/dev/null 2>&1 || { 
+	echo "--------------------------------------------------------------------------------"
+	echo "--- COPY SSH PUBLIC KEY TO SYSTEM CLIPBOARD ------------------------------------"
+	echo "--------------------------------------------------------------------------------"
+	PUBLIC_KEY_FILE_PATH="$KEY_FILE_PATH.pub"
+	xclip -sel clip < $PUBLIC_KEY_FILE_PATH 
+}
+

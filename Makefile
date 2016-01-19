@@ -1,8 +1,8 @@
 install:
-	mkdir /opt/sshko
-	cp ./sshko.sh /opt/sshko/
-	ln -s /opt/sshko/sshko.sh /usr/local/bin/sshko
+	mkdir -p /opt/ssko
+	cp ./ssko.sh /opt/ssko/
+	ln -s /opt/ssko/ssko.sh /usr/local/bin/ssko
 
 uninstall:
-	unlink /usr/local/bin/sshko
-	rm -rf /opt/sshko/
+	unlink /usr/local/bin/ssko
+	rm -rf /opt/ssko/

@@ -32,4 +32,4 @@ HOST server01
 ```
 
 After configuration you can copy `id_rsa_192.168.0.1.pub` to your server.
-For details how to configure server read this ![StackOverflow answer](http://serverfault.com/questions/313465/is-a-central-location-for-authorized-keys-a-good-idea).
+For details how to configure server read this [StackOverflow answer](http://serverfault.com/questions/313465/is-a-central-location-for-authorized-keys-a-good-idea).

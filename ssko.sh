@@ -96,15 +96,15 @@ echo "--------------------------------------------------------------------------
 # user_password=$user_password_try_01
 # echo "--------------------------------------------------------------------------------"
 
-# Read User e-mail 
+# Read User comment 
 ERROR_COUNTER=0
-until [ ! -z "$user_email" ]; do
+until [ ! -z "$user_comment" ]; do
 	if [ $ERROR_COUNTER -eq 1 ]; then
-		echo "ERROR: User E-mail cannot be empty. Please re-enter."
+		echo "ERROR: User comment cannot be empty. Please re-enter."
 		echo "--------------------------------------------------------------------------------"
 	fi;
-	echo "Enter User e-mail, followed by [ENTER]:"
-	read user_email
+	echo "Enter User comment, followed by [ENTER]:"
+	read user_comment
 	ERROR_COUNTER=1
 done
 
@@ -120,7 +120,7 @@ KEY_FILE_PATH="$CURRENT_SESSION_KEY_DIR/$KEY_FILE_NAME"
 echo "--------------------------------------------------------------------------------"
 echo "--- SSH KEY GENERATION. KEY LENGTH 4096 ----------------------------------------"
 echo "--------------------------------------------------------------------------------"
-ssh-keygen -b 4096 -f $KEY_FILE_PATH -C $user_email -o -a 500
+ssh-keygen -b 4096 -f $KEY_FILE_PATH -C "$user_comment" -o -a 500
 
 cd $PER_USER_SSH_CONFIG_DIR
 cat << EOF >> ./config
